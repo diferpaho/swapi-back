@@ -11,7 +11,8 @@ python3 part1-logic/parteA.py
 
 To execute the script of section B execute the following command:
 ```
-python3 part1-logic/parteB.py
+python3 part1-logic/partB_op1.py
+python3 part1-logic/partB_op2.py
 ```
 
 ## Part 2 - Mini project
