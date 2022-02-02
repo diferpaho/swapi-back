@@ -1,6 +1,22 @@
 # SW API GraphQL
 
-## Requirements
+## Part 1 - Logic exercises
+
+#### Running the script
+
+To execute the script of section A execute the following command:
+```
+python3 part1-logic/parteA.py
+```
+
+To execute the script of section B execute the following command:
+```
+python3 part1-logic/parteB.py
+```
+
+## Part 2 - Mini project
+
+### Requirements
 * [Python](https://www.python.org/) (realizado en python 3.8)
 * [Django](https://github.com/django/django)
 * [Django Filter](https://github.com/carltongibson/django-filter)
@@ -8,7 +24,7 @@
 * [Graphene](https://github.com/graphql-python/graphene-django)
 * [.EVN](https://github.com/theskumar/python-dotenv)
 
-## Setup
+### Setup
 
 Clone the project
 ```
@@ -26,7 +42,7 @@ python manage.py migrate
 python manage.py load_fixtures
 ```
 
-### Running the server
+#### Running the server
 ```
 python manage.py runserver
 ```
@@ -34,7 +50,7 @@ If you want to check it out, access the graphi explorer here: `127.0.0.1:8000/ex
 
 The service should be available in the URL: `127.0.0.1:8000/graphql`.
 
-### Runing the tests
+#### Runing the tests
 ```
 python manage.py test
 ```
