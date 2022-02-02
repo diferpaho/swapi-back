@@ -35,18 +35,46 @@ class People(TimeStampedModel, SimpleNameModel):
     HERMAPHRODITE = 'hermaphrodite'
     NA = 'n/a'
 
+    BLACK='black'
+    BROWN='brown'
+    BLONDE='blonde'
+    RED='red'
+    WHITE='white'
+    BALD='bald'
+    YELLOW='yellow'
+    GREEN='green'
+    PURPLE='purple'
+    UNKNOWN='unknow'
+
     GENDER = (
         (MALE, 'Male'),
         (FEMALE, 'Female'),
         (HERMAPHRODITE, 'Hermaphrodite'),
         (NA, 'N/A'),
     )
+    HAIR_COLORS =(
+        (BLACK,'BLACK'), 
+        (BROWN,'BROWN'), 
+        (BLONDE,'BLONDE'), 
+        (RED,'RED'), 
+        (WHITE,'WHITE'), 
+        (BALD,'BALD')
+    )
+    EYE_COLORS=(
+        (BLACK,'BLACK'),
+        (BROWN,'BROWN'),
+        (YELLOW,'YELLOW'),
+        (RED,'RED'),
+        (GREEN,'GREEN'),
+        (PURPLE,'PURPLE'),
+        (UNKNOWN,'UNKNOWN')
+    )
 
     height = models.CharField(max_length=16, blank=True)
     mass = models.CharField(max_length=16, blank=True)
-    hair_color = models.CharField(max_length=32, blank=True)
+    hair_color = models.CharField(max_length=32, choices=HAIR_COLORS)
     skin_color = models.CharField(max_length=32, blank=True)
-    eye_color = models.CharField(max_length=32, blank=True)
+    eye_color = models.CharField(max_length=32, choices= EYE_COLORS)
     birth_year = models.CharField(max_length=16, blank=True)
     gender = models.CharField(max_length=64, choices=GENDER)
     home_world = models.ForeignKey(Planet, on_delete=models.CASCADE, related_name='inhabitants')
