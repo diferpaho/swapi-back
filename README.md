@@ -72,7 +72,7 @@ This project is based on Django, for more information you can access https://www
 
 You can find more information about graphql at https://graphql.org/
 
-#### Generate a docker 
+#### Generate a docker image
 
 You can use the following command in terminal to build the project image.
 
