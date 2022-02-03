@@ -1,6 +1,13 @@
 # SW API GraphQL
 
+# Description
+
+Test BackEnd Software Engineer - LQN
+
 ## Part 1 - Logic exercises
+
+### Description
+Logic exercises developed in Python
 
 #### Running the script
 
@@ -15,6 +22,11 @@ python3 part1-logic/partB.py
 ```
 
 ## Part 2 - Mini project
+
+### Description
+
+Project containing a GraphQL API for a website to
+Star Wars fans.
 
 ### Requirements
 * [Python](https://www.python.org/) (realizado en python 3.8)
@@ -54,3 +66,8 @@ The service should be available in the URL: `127.0.0.1:8000/graphql`.
 ```
 python manage.py test
 ```
+# Support
+
+This project is based on Django, for more information you can access https://www.djangoproject.com/
+
+You can find more information about graphql at https://graphql.org/
