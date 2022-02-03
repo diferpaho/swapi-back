@@ -58,8 +58,12 @@ WSGI_APPLICATION = 'swapi.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'yynpjlcphyeu5g4v',
+        'USER': 'm828h16blwe0e03q',
+        'PASSWORD': 'f8afv78ydafj67hs',
+        'HOST':'ble5mmo2o5v9oouq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+        'PORT': '3306'
     }
 }
 
