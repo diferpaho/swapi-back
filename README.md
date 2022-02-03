@@ -62,15 +62,24 @@ If you want to check it out, access the graphi explorer here: `127.0.0.1:8000/ex
 
 The service should be available in the URL: `127.0.0.1:8000/graphql`.
 
+#### Django Admin
+
+To enter the Django administrator you must create a super user with the following command
+
+```
+python manage.py createsuperuser
+```
+You can access the administrator from the following url:`127.0.0.1:8000/admin`
+
 #### Runing the tests
 ```
 python manage.py test
 ```
 #### Support
 
-This project is based on Django, for more information you can access https://www.djangoproject.com/
+This project is based on Django, for more information you can access `https://www.djangoproject.com/`
 
-You can find more information about graphql at https://graphql.org/
+You can find more information about graphql at `https://graphql.org/`
 
 #### Generate a docker image
 
