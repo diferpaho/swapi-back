@@ -1,6 +1,6 @@
 # SW API GraphQL
 
-# Description
+## Description
 
 Test BackEnd Software Engineer - LQN
 
@@ -66,8 +66,17 @@ The service should be available in the URL: `127.0.0.1:8000/graphql`.
 ```
 python manage.py test
 ```
-# Support
+#### Support
 
 This project is based on Django, for more information you can access https://www.djangoproject.com/
 
 You can find more information about graphql at https://graphql.org/
+
+#### Generate a docker 
+
+You can use the following command in terminal to build the project image.
+
+```
+docker build .
+```
+
