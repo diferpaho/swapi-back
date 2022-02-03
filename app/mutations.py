@@ -6,7 +6,7 @@ from .types import PlanetType,PeopleType,FilmType
 from .utils import generic_model_mutation_process
 
 
-class PostPlanetMutation(graphene.relay.ClientIDMutation):
+class SetPlanetMutation(graphene.relay.ClientIDMutation):
     class Input:
         id = graphene.ID(required=False)
         name = graphene.String(required=True)
@@ -30,9 +30,9 @@ class PostPlanetMutation(graphene.relay.ClientIDMutation):
             data['id'] = from_global_id(raw_id)[1]
 
         planet = generic_model_mutation_process(**data)
-        return PostPlanetMutation(planet=planet)
+        return SetPlanetMutation(planet=planet)
 
-class PostPeopleMutation(graphene.relay.ClientIDMutation):
+class SetPeopleMutation(graphene.relay.ClientIDMutation):
     class Input:
         id = graphene.ID(required=False)
         name = graphene.String(required=True)
@@ -57,7 +57,7 @@ class PostPeopleMutation(graphene.relay.ClientIDMutation):
             data['id'] = from_global_id(raw_id)[1]
 
         people = generic_model_mutation_process(**data)
-        return PostPeopleMutation(people=people)
+        return SetPeopleMutation(people=people)
 
 class UpdatePeopleMutation(graphene.relay.ClientIDMutation):
     class Input:
