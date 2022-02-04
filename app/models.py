@@ -77,7 +77,7 @@ class People(TimeStampedModel, SimpleNameModel):
     eye_color = models.CharField(max_length=32, choices= EYE_COLORS)
     birth_year = models.CharField(max_length=16, blank=True)
     gender = models.CharField(max_length=64, choices=GENDER)
-    home_world = models.ForeignKey(Planet, on_delete=models.CASCADE, related_name='inhabitants')
+    home_world = models.ForeignKey(Planet, on_delete=models.CASCADE, related_name='inhabitants',blank=True,null=True)
 
     class Meta:
         db_table = 'people'

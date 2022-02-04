@@ -33,8 +33,11 @@ class SetPlanetMutation(graphene.relay.ClientIDMutation):
         return SetPlanetMutation(planet=planet)
 
 class SetPeopleMutation(graphene.relay.ClientIDMutation):
+    """
+    Para el metodo set podemos reutilizar la misma forma de la mutacion anterior,
+    en este caso el ID no se solicita para garantizar que se cree un registro.
+    """
     class Input:
-        id = graphene.ID(required=False)
         name = graphene.String(required=True)
         mass = graphene.String(required=False)
         height = graphene.String(required=False)
@@ -43,7 +46,7 @@ class SetPeopleMutation(graphene.relay.ClientIDMutation):
         eye_color = graphene.String(required=True)
         birth_year = graphene.String(required=False)
         gender = graphene.String(required=True)
-        home_world = graphene.GlobalID(parent_type=PlanetType, required=True)
+        home_world = graphene.GlobalID(parent_type=PlanetType, required=False)
         films = graphene.GlobalID(parent_type=FilmType, required=False)
     
     people = graphene.Field(PeopleType)
@@ -60,6 +63,11 @@ class SetPeopleMutation(graphene.relay.ClientIDMutation):
         return SetPeopleMutation(people=people)
 
 class UpdatePeopleMutation(graphene.relay.ClientIDMutation):
+    """
+    Para el metodo update podemos reutilizar la misma forma de la primera mutacion,
+    en este caso el ID es requerido para garantizar que se actualice un registro
+    ya creado
+    """
     class Input:
         id = graphene.ID(required=True)
         name = graphene.String(required=True)
@@ -70,8 +78,8 @@ class UpdatePeopleMutation(graphene.relay.ClientIDMutation):
         eye_color = graphene.String(required=True)
         birth_year = graphene.String(required=False)
         gender = graphene.String(required=True)
-        home_world = graphene.GlobalID(parent_type=PlanetType, required=True)
-        films = graphene.GlobalID(parent_type=FilmType, required=False)
+        home_world = graphene.GlobalID(parent_type=PlanetType, required=False)
+        work_films = graphene.GlobalID(parent_type=FilmType, required=False)
     
     people = graphene.Field(PeopleType)
 
